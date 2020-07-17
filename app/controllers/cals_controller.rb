@@ -1,4 +1,5 @@
 class CalsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @cals = Cal.all
@@ -33,6 +34,12 @@ class CalsController < ApplicationController
       redirect_to cals_path, notice: "編集しました"
     else
       render 'edit'
+    end
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to :root
     end
   end
 
