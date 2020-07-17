@@ -10,6 +10,13 @@
         %a.nav-link{:href => "/cals/index"} マイページ
       %li.nav-item
         %a.nav-link{:href => "/navis/index"} ドコイクナビ
-    %form.form-inline.mt-2.mt-md-0
-      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "text"}/
-      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+    - if user_signed_in?
+      .user_nav.grid-6
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
+      .grid-6
+        = link_to "ログイン", new_user_session_path, class: "post"
+        = link_to "新規登録", new_user_registration_path, class: "post"
+    -# %form.form-inline.mt-2.mt-md-0
+    -#   %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "text"}/
+    -#   %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
