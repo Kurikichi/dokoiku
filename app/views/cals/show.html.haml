@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong タイトル
+  = @cal.title
+%p
+  %strong 時間
+  = @cal.start_time.strftime("%Y-%m-%d %H:%M")
+%p
+  %strong メモ
+  = @cal.content
+= link_to '編集', edit_cal_path(@cal)
+|
+= link_to '戻る', cals_path

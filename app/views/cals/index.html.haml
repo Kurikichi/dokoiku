@@ -1,0 +1,26 @@
+.wrapper
+  = render "header"
+
+%p#notice= notice
+%h1 マイページ
+%table
+  %thead
+    %tr
+      %th 目的地
+      %th 時間
+      %th{:colspan => "3"}
+  %tbody
+    - @cals.each do |cal|
+      %tr
+        %td= cal.title
+        %td= cal.start_time.strftime("%Y-%m-%d %H:%M")
+        %td= link_to '詳細', cal
+        %td= link_to '編集', edit_cal_path(cal.id)
+        %td= link_to '削除',cal_path(cal.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' }
+%br/
+= link_to '予定を立てる', new_cal_path
+= month_calendar events: @cals do |date, cals|
+  = date.day
+  - cals.each do |cal|
+    %div
+      = link_to cal.title, cal
