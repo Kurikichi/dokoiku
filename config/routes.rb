@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'cals/index'
   get 'navis/index'
   get 'home/index'
