@@ -19,7 +19,7 @@ $(document).on('turbolinks:load', function(){
         }
         ,{
             question : 'Q3. 交通手段は？',
-            answer : ['徒歩', '車', '電車・バス', '飛行機']
+            answer : ['徒歩・自転車', '車', '電車・バス', '飛行機']
         }
         ,{
             question : 'Q4. 何日の予定ですか？',
