@@ -109,6 +109,7 @@ $(document).on('turbolinks:load', function(){
         // if(quiz_fin_cnt === quiz_success_cnt){
         //     text += 'あなたへのオススメは東京ディズニーランドです！';
         // }
+        text += '<br><input type="button" value="カレンダーに追加する！" onclick="history.back()">';
         text += '<br><input type="button" value="やりなおす" class="quiz_restart p-10">';
         quizArea.find('.quiz_result').html(text);
         quizArea.find('.quiz_result').show();
