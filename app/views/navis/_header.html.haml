@@ -7,6 +7,7 @@
       %li.nav-item
         %a.nav-link{:href => "/home/index"} Home
       %li.nav-item
+      - if user_signed_in?
         %a.nav-link{:href => "/cals/index"} マイページ
       %li.nav-item.active
         %a.nav-link{:href => "/navis/index"} ドコイクナビ
