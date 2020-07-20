@@ -1,12 +1,12 @@
 = form_with(model: @cal, local: true) do |form|
   .title
-    = form.label :title
+    = form.label :タイトル
     = form.text_field :title
   .time
-    = form.label :start_time
+    = form.label :開始時間
     = form.datetime_select :start_time
   .content
-    = form.label :content
+    = form.label :メモ
     = form.text_field :content
   .submit
     = form.submit

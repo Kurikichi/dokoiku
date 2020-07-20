@@ -1,5 +1,5 @@
 class CalsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:root, :show]
 
   def index
     @cals = Cal.all

@@ -109,10 +109,8 @@ $(document).on('turbolinks:load', function(){
         // if(quiz_fin_cnt === quiz_success_cnt){
         //     text += 'あなたへのオススメは東京ディズニーランドです！';
         // }
-        // text += '<br><input type="button" value="トップへ" onClick="index">';
         text += '<br><input type="button" value="やりなおす" class="quiz_restart p-10">';
         quizArea.find('.quiz_result').html(text);
-        // quizArea.find('.quiz_result').html('<img src=https://dime.jp/genre/files/2018/06/01-16.jpg alt="サンプル画像">');
         quizArea.find('.quiz_result').show();
     }
     

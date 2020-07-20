@@ -62,4 +62,6 @@ gem 'devise'
 
 #deviseの日本語化用
 gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 gem 'font-awesome-rails'
