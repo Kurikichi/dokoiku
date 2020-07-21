@@ -1,3 +1,6 @@
+.wrapper
+  = render "header"
+
 = form_with(model: @cal, local: true) do |form|
   .title
     = form.label :目的地
